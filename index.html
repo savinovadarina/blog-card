@@ -2,13 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Blog preview card</title>
 </head>
 <body>
-
+  <main>
+    <article class="blog-card">
+      <picture>
+        <!-- Будущая адаптивная графика с srcset -->
+        <img class="blog-card__img" src="assets/images/illustration-article.svg" alt="Abstract HTML & CSS code illustration" width="336" height="200">
+      </picture>
+      <ul class="blog-card__tags">
+        <li>Learning</li>
+        <!-- Возможно все же заменю на обычный div со strong, тк для челленджа -->
+      </ul>
+      <!-- Изменено с h3 на h2 как на основной заголовок статьи -->
+      <a class="blog-card__title" href="#">
+        <h2>
+          HTML & CSS foundations
+        </h2>
+      </a>
+      <p class="blog-card__pubdate">
+        <time datetime="2023-12-21">Published 21 Dec 2023</time>
+      </p>
+      <p class="blog-card__desc">
+        These languages are the backbone of every website, defining structure, content, and presentation.
+      </p>
+      <address class="blog-card__author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <img itemprop="image" src="assets/images/image-avatar.webp" alt="Portrait of Greg Hooper">
+        <!-- Имя автора обернуто в span для лучшей структуры -->
+        <span itemprop="name">Greg Hooper</span>
+      </address>
+    </article>
+  </main>
 </body>
 </html>
